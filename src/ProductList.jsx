@@ -11,216 +11,215 @@ function ProductList({ onHomeClick }) {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // TODAS AS PLANTAS ORIGINAIS - COMPLETAS
+  // Todas as plantas originais - traduzidas
   const plantsArray = [
     {
-      category: "Air Purifying Plants",
+      category: "Plantas Purificadoras de Ar",
       plants: [
         {
-          name: "Snake Plant",
+          name: "Espada de São Jorge",
           image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-          description: "Produces oxygen at night, improving air quality.",
+          description: "Produz oxigênio à noite, melhorando a qualidade do ar.",
           cost: "$15"
         },
         {
-          name: "Spider Plant",
+          name: "Clorofito",
           image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
-          description: "Filters formaldehyde and xylene from the air.",
+          description: "Filtra formaldeído e xileno do ar.",
           cost: "$12"
         },
         {
-          name: "Peace Lily",
+          name: "Lírio da Paz",
           image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
-          description: "Removes mold spores and purifies the air.",
+          description: "Remove esporos de mofo e purifica o ar.",
           cost: "$18"
         },
         {
-          name: "Boston Fern",
+          name: "Samambaia Americana",
           image: "https://cdn.pixabay.com/photo/2020/04/30/19/52/boston-fern-5114414_1280.jpg",
-          description: "Adds humidity to the air and removes toxins.",
+          description: "Adiciona umidade ao ar e remove toxinas.",
           cost: "$20"
         },
         {
-          name: "Rubber Plant",
+          name: "Ficus Elástica",
           image: "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
-          description: "Easy to care for and effective at removing toxins.",
+          description: "Fácil de cuidar e eficaz na remoção de toxinas.",
           cost: "$17"
         },
         {
-          name: "Aloe Vera",
+          name: "Babosa",
           image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-          description: "Purifies the air and has healing properties for skin.",
+          description: "Purifica o ar e tem propriedades curativas para a pele.",
           cost: "$14"
         }
       ]
     },
     {
-      category: "Aromatic Fragrant Plants",
+      category: "Plantas Aromáticas e Fragrantes",
       plants: [
         {
-          name: "Lavender",
+          name: "Lavanda",
           image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          description: "Calming scent, used in aromatherapy.",
+          description: "Aroma calmante, usado em aromaterapia.",
           cost: "$20"
         },
         {
-          name: "Jasmine",
+          name: "Jasmim",
           image: "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          description: "Sweet fragrance, promotes relaxation.",
+          description: "Fragrância doce, promove relaxamento.",
           cost: "$18"
         },
         {
-          name: "Rosemary",
+          name: "Alecrim",
           image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
-          description: "Invigorating scent, often used in cooking.",
+          description: "Aroma revigorante, frequentemente usado na culinária.",
           cost: "$15"
         },
         {
-          name: "Mint",
+          name: "Hortelã",
           image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",
-          description: "Refreshing aroma, used in teas and cooking.",
+          description: "Aroma refrescante, usado em chás e culinária.",
           cost: "$12"
         },
         {
-          name: "Lemon Balm",
+          name: "Erva Cidreira",
           image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-          description: "Citrusy scent, relieves stress and promotes sleep.",
+          description: "Aroma cítrico, alivia o estresse e promove o sono.",
           cost: "$14"
         },
         {
-          name: "Hyacinth",
+          name: "Jacinto",
           image: "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
-          description: "Hyacinth is a beautiful flowering plant known for its fragrant.",
+          description: "Planta florífera conhecida por sua fragrância marcante.",
           cost: "$22"
         }
       ]
     },
     {
-      category: "Insect Repellent Plants",
+      category: "Plantas Repelentes de Insetos",
       plants: [
         {
-          name: "oregano",
+          name: "Orégano",
           image: "https://cdn.pixabay.com/photo/2015/05/30/21/20/oregano-790702_1280.jpg",
-          description: "The oregano plants contains compounds that can deter certain insects.",
+          description: "Contém compostos que podem repelir certos insetos.",
           cost: "$10"
         },
         {
-          name: "Marigold",
+          name: "Cravo-de-defunto",
           image: "https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
-          description: "Natural insect repellent, also adds color to the garden.",
+          description: "Repelente natural de insetos, também adiciona cor ao jardim.",
           cost: "$8"
         },
         {
-          name: "Geraniums",
+          name: "Gerânios",
           image: "https://cdn.pixabay.com/photo/2012/04/26/21/51/flowerpot-43270_1280.jpg",
-          description: "Known for their insect-repelling properties while adding a pleasant scent.",
+          description: "Conhecidos por suas propriedades repelentes de insetos.",
           cost: "$20"
         },
         {
-          name: "Basil",
+          name: "Manjericão",
           image: "https://cdn.pixabay.com/photo/2016/07/24/20/48/tulsi-1539181_1280.jpg",
-          description: "Repels flies and mosquitoes, also used in cooking.",
+          description: "Repelente natural de moscas e mosquitos, usado na culinária.",
           cost: "$9"
         },
         {
-          name: "Lavender",
+          name: "Lavanda",
           image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          description: "Calming scent, used in aromatherapy.",
+          description: "Aroma calmante, usado em aromaterapia.",
           cost: "$20"
         },
         {
-          name: "Catnip",
+          name: "Erva-de-gato",
           image: "https://cdn.pixabay.com/photo/2015/07/02/21/55/cat-829681_1280.jpg",
-          description: "Repels mosquitoes and attracts cats.",
+          description: "Repelente natural de mosquitos e atrai gatos.",
           cost: "$13"
         }
       ]
     },
     {
-      category: "Medicinal Plants",
+      category: "Plantas Medicinais",
       plants: [
         {
-          name: "Aloe Vera",
+          name: "Babosa",
           image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-          description: "Soothing gel used for skin ailments.",
+          description: "Gel calmante usado para problemas de pele.",
           cost: "$14"
         },
         {
-          name: "Echinacea",
+          name: "Equinácea",
           image: "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg",
-          description: "Boosts immune system, helps fight colds.",
+          description: "Fortalece o sistema imunológico, ajuda a combater resfriados.",
           cost: "$16"
         },
         {
-          name: "Peppermint",
+          name: "Hortelã-pimenta",
           image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
-          description: "Relieves digestive issues and headaches.",
+          description: "Alivia problemas digestivos e dores de cabeça.",
           cost: "$13"
         },
         {
-          name: "Lemon Balm",
+          name: "Erva Cidreira",
           image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-          description: "Calms nerves and promotes relaxation.",
+          description: "Acalma os nervos e promove relaxamento.",
           cost: "$14"
         },
         {
-          name: "Chamomile",
+          name: "Camomila",
           image: "https://cdn.pixabay.com/photo/2016/08/19/19/48/flowers-1606041_1280.jpg",
-          description: "Soothes anxiety and promotes sleep.",
+          description: "Acalma a ansiedade e promove o sono.",
           cost: "$15"
         },
         {
-          name: "Calendula",
+          name: "Calêndula",
           image: "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",
-          description: "Heals wounds and soothes skin irritations.",
+          description: "Cura feridas e alivia irritações na pele.",
           cost: "$12"
         }
       ]
     },
     {
-      category: "Low Maintenance Plants",
+      category: "Plantas de Baixa Manutenção",
       plants: [
         {
-          name: "ZZ Plant",
+          name: "Zamioculca",
           image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          description: "Thrives in low light and requires minimal watering.",
+          description: "Cresce em pouca luz e requer regas mínimas.",
           cost: "$25"
         },
         {
-          name: "Pothos",
+          name: "Jiboia",
           image: "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
-          description: "Tolerates neglect and can grow in various conditions.",
+          description: "Tolerante e pode crescer em várias condições.",
           cost: "$10"
         },
         {
-          name: "Snake Plant",
+          name: "Espada de São Jorge",
           image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-          description: "Needs infrequent watering and is resilient to most pests.",
+          description: "Resistente à maioria das pragas e requer pouca água.",
           cost: "$15"
         },
         {
-          name: "Cast Iron Plant",
+          name: "Planta de Ferro",
           image: "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
-          description: "Hardy plant that tolerates low light and neglect.",
+          description: "Planta resistente que tolera pouca luz e negligência.",
           cost: "$20"
         },
         {
-          name: "Succulents",
+          name: "Suculentas",
           image: "https://cdn.pixabay.com/photo/2016/11/21/16/05/cacti-1846147_1280.jpg",
-          description: "Drought-tolerant plants with unique shapes and colors.",
+          description: "Plantas resistentes à seca com formas e cores únicas.",
           cost: "$18"
         },
         {
           name: "Aglaonema",
           image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
-          description: "Requires minimal care and adds color to indoor spaces.",
+          description: "Requer cuidados mínimos e adiciona cor a espaços internos.",
           cost: "$22"
         }
       ]
     }
   ];
 
-  // Filtrar plantas
   const getAllPlants = () => {
     return plantsArray.flatMap(category => 
       category.plants.map(plant => ({ ...plant, category: category.category }))
@@ -269,22 +268,30 @@ function ProductList({ onHomeClick }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const categoryNames = {
+    'all': 'Todas as Categorias',
+    'Plantas Purificadoras de Ar': 'Plantas Purificadoras de Ar',
+    'Plantas Aromáticas e Fragrantes': 'Plantas Aromáticas e Fragrantes',
+    'Plantas Repelentes de Insetos': 'Plantas Repelentes de Insetos',
+    'Plantas Medicinais': 'Plantas Medicinais',
+    'Plantas de Baixa Manutenção': 'Plantas de Baixa Manutenção'
+  };
+
   return (
     <div className="product-list-page">
-      {/* Navbar */}
       <nav className="modern-navbar">
         <div className="nav-brand" onClick={onHomeClick}>
           <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="Logo" />
           <div>
-            <h3>Paradise Nursery</h3>
-            <span>Where Green Meets Serenity</span>
+            <h3>Paraíso Verde</h3>
+            <span>Onde a natureza encontra seu lar</span>
           </div>
         </div>
 
         <div className="nav-links">
-          <button className="nav-link" onClick={() => setShowCart(false)}>Plants</button>
+          <button className="nav-link" onClick={() => setShowCart(false)}>Plantas</button>
           <button className="nav-link-cart" onClick={() => setShowCart(true)}>
-            Cart
+            Carrinho
             {calculateTotalQuantity() > 0 && (
               <span className="cart-badge">{calculateTotalQuantity()}</span>
             )}
@@ -294,11 +301,10 @@ function ProductList({ onHomeClick }) {
 
       {!showCart ? (
         <>
-          {/* Barra de busca e filtros */}
           <div className="search-filter-bar">
             <input
               type="text"
-              placeholder="Search plants..."
+              placeholder="Buscar plantas..."
               className="search-input"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -310,17 +316,16 @@ function ProductList({ onHomeClick }) {
             >
               {categories.map(cat => (
                 <option key={cat} value={cat}>
-                  {cat === 'all' ? 'All Categories' : cat}
+                  {categoryNames[cat] || cat}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Resultados */}
           <div className="product-grid-modern">
             {filteredPlants.length === 0 ? (
               <div className="no-results">
-                <p>No plants found</p>
+                <p>Nenhuma planta encontrada</p>
               </div>
             ) : (
               filteredPlants.map((plant, index) => (
@@ -339,7 +344,7 @@ function ProductList({ onHomeClick }) {
                         onClick={() => handleAddToCart(plant)}
                         disabled={addedToCart[plant.name]}
                       >
-                        {addedToCart[plant.name] ? '✓ Added' : 'Add to Cart'}
+                        {addedToCart[plant.name] ? '✓ Adicionado' : '+ Carrinho'}
                       </button>
                     </div>
                   </div>
@@ -348,10 +353,9 @@ function ProductList({ onHomeClick }) {
             )}
           </div>
 
-          {/* Botão voltar ao topo */}
           {showBackToTop && (
             <button className="back-to-top" onClick={scrollToTop}>
-              ↑ Top
+              ↑ Topo
             </button>
           )}
         </>

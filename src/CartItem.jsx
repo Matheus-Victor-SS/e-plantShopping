@@ -7,7 +7,6 @@ const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
-  // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
     let total = 0;
     cart.forEach(item => {
@@ -21,7 +20,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleCheckoutShopping = (e) => {
-    alert('🛍️ Checkout functionality will be available soon!');
+    alert('🛍️ Funcionalidade de finalização de compra em breve!');
   };
 
   const handleIncrement = (item) => {
@@ -37,7 +36,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleRemove = (item) => {
-    if (window.confirm(`Remove ${item.name} from cart?`)) {
+    if (window.confirm(`Remover ${item.name} do carrinho?`)) {
       dispatch(removeItem(item.name));
     }
   };
@@ -51,10 +50,10 @@ const CartItem = ({ onContinueShopping }) => {
       <div className="cart-container">
         <div className="empty-cart">
           <div className="empty-cart-icon">🛒</div>
-          <h3>Your cart is empty</h3>
-          <p>Looks like you haven't added any plants yet</p>
+          <h3>Seu carrinho está vazio</h3>
+          <p>Parece que você ainda não adicionou nenhuma planta</p>
           <button className="continue-shopping-btn" onClick={handleContinueShopping}>
-            Continue Shopping
+            Continuar Comprando
           </button>
         </div>
       </div>
@@ -64,9 +63,9 @@ const CartItem = ({ onContinueShopping }) => {
   return (
     <div className="cart-container">
       <div className="cart-header">
-        <h2>Shopping Cart</h2>
+        <h2>Carrinho de Compras</h2>
         <div className="cart-summary">
-          <span>Total Amount:</span>
+          <span>Valor Total:</span>
           <strong>${calculateTotalAmount()}</strong>
         </div>
       </div>
@@ -86,7 +85,7 @@ const CartItem = ({ onContinueShopping }) => {
                 <button 
                   className="quantity-btn quantity-dec" 
                   onClick={() => handleDecrement(item)}
-                  aria-label="Decrease quantity"
+                  aria-label="Diminuir quantidade"
                 >
                   −
                 </button>
@@ -94,7 +93,7 @@ const CartItem = ({ onContinueShopping }) => {
                 <button 
                   className="quantity-btn quantity-inc" 
                   onClick={() => handleIncrement(item)}
-                  aria-label="Increase quantity"
+                  aria-label="Aumentar quantidade"
                 >
                   +
                 </button>
@@ -106,7 +105,7 @@ const CartItem = ({ onContinueShopping }) => {
               </div>
               
               <button className="delete-btn" onClick={() => handleRemove(item)}>
-                Remove
+                Remover
               </button>
             </div>
           </div>
@@ -115,16 +114,16 @@ const CartItem = ({ onContinueShopping }) => {
 
       <div className="cart-footer">
         <div className="cart-grand-total">
-          <span>Grand Total:</span>
+          <span>Total Geral:</span>
           <strong>${calculateTotalAmount()}</strong>
         </div>
         
         <div className="cart-actions">
           <button className="continue-shopping-btn" onClick={handleContinueShopping}>
-            ← Continue Shopping
+            ← Continuar Comprando
           </button>
           <button className="checkout-btn" onClick={handleCheckoutShopping}>
-            Checkout →
+            Finalizar Compra →
           </button>
         </div>
       </div>
