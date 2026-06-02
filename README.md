@@ -1,12 +1,35 @@
-# e-plantShopping
+# Paraíso Verde - E-commerce de Plantas
 
-Este repositório, **e-plantShopping**, contém o projeto React `e-plantShopping`.
+React | Redux | CSS3 | JavaScript
 
-O projeto é uma aplicação de compras online de plantas que permite aos usuários navegar por produtos, adicionar itens ao carrinho e gerenciar suas escolhas de forma simples e visual.
+## Sobre o Projeto
 
-## Visão geral
+E-commerce completo de plantas com design moderno e responsivo. Usuários podem explorar categorias, buscar produtos e gerenciar o carrinho de compras. O projeto foi feito com auxilio do curso Desenvoledor Full-Stack pela IBM.
 
-- Nome do repositório: `e-plantShopping`
-- Nome do projeto: `e-plantShopping`
-- Tecnologias: React, Vite, JavaScript
-- Objetivo: fornecer uma experiência de e-commerce para plantas com navegação de produtos e carrinho de compras.
+## Funcionalidades
+
+- Catálogo com 5 categorias e 30+ plantas
+- Busca em tempo real por nome ou descrição
+- Filtro por categoria
+- Carrinho de compras (adicionar, remover, ajustar quantidade)
+- Cálculo automático de valores totais
+- Layout responsivo (mobile first)
+- Botão voltar ao topo
+
+## Tecnologias
+
+- React 18
+- Redux (gerenciamento de estado)
+- CSS3 com Flexbox e Grid
+- JavaScript ES6+
+
+## Como executar
+
+```bash
+git clone https://github.com/seu-usuario/paraiso-verde.git
+cd paraiso-verde
+npm install
+npm start
+```
+## Autor
+Desenvolvido por Matheus Victor
